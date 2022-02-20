@@ -1,0 +1,214 @@
+bind_host: 0.0.0.0
+bind_port: 80
+beta_bind_port: 0
+users:
+- name: scott
+  password: 
+auth_attempts: 5
+block_auth_min: 15
+http_proxy: ""
+language: ""
+debug_pprof: false
+web_session_ttl: 720
+dns:
+  bind_hosts:
+  - 0.0.0.0
+  port: 53
+  statistics_interval: 1
+  querylog_enabled: true
+  querylog_file_enabled: true
+  querylog_interval: 2160h
+  querylog_size_memory: 1000
+  anonymize_client_ip: false
+  protection_enabled: true
+  blocking_mode: default
+  blocking_ipv4: ""
+  blocking_ipv6: ""
+  blocked_response_ttl: 10
+  parental_block_host: family-block.dns.adguard.com
+  safebrowsing_block_host: standard-block.dns.adguard.com
+  ratelimit: 20
+  ratelimit_whitelist: []
+  refuse_any: true
+  upstream_dns:
+  - https://dns10.quad9.net/dns-query
+  - https://1.1.1.1/dns-query
+  - https://1.0.0.1/dns-query
+  - 168.95.1.1
+  - 9.9.9.9
+  - 8.8.8.8
+  upstream_dns_file: ""
+  bootstrap_dns:
+  - 9.9.9.10
+  - 149.112.112.10
+  - 2620:fe::10
+  - 2620:fe::fe:10
+  all_servers: false
+  fastest_addr: false
+  fastest_timeout: 1s
+  allowed_clients: []
+  disallowed_clients: []
+  blocked_hosts:
+  - version.bind
+  - id.server
+  - hostname.bind
+  trusted_proxies:
+  - 127.0.0.0/8
+  - ::1/128
+  cache_size: 4194304
+  cache_ttl_min: 0
+  cache_ttl_max: 0
+  cache_optimistic: false
+  bogus_nxdomain: []
+  aaaa_disabled: false
+  enable_dnssec: false
+  edns_client_subnet: false
+  max_goroutines: 300
+  ipset: []
+  filtering_enabled: true
+  filters_update_interval: 24
+  parental_enabled: false
+  safesearch_enabled: false
+  safebrowsing_enabled: false
+  safebrowsing_cache_size: 1048576
+  safesearch_cache_size: 1048576
+  parental_cache_size: 1048576
+  cache_time: 30
+  rewrites: []
+  blocked_services: []
+  upstream_timeout: 10s
+  local_domain_name: lan
+  resolve_clients: true
+  use_private_ptr_resolvers: true
+  local_ptr_upstreams: []
+tls:
+  enabled: false
+  server_name: ""
+  force_https: false
+  port_https: 443
+  port_dns_over_tls: 853
+  port_dns_over_quic: 784
+  port_dnscrypt: 0
+  dnscrypt_config_file: ""
+  allow_unencrypted_doh: false
+  strict_sni_check: false
+  certificate_chain: ""
+  private_key: ""
+  certificate_path: ""
+  private_key_path: ""
+filters:
+- enabled: true
+  url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+  name: AdGuard DNS filter
+  id: 1
+- enabled: true
+  url: https://adaway.org/hosts.txt
+  name: AdAway Default Blocklist
+  id: 2
+- enabled: true
+  url: https://www.i-dont-care-about-cookies.eu/abp/
+  name: I don't care about cookies
+  id: 1645342248
+- enabled: true
+  url: https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt
+  name: WindowsSpyBlocker - Hosts spy rules
+  id: 1645342249
+- enabled: true
+  url: https://cdn.jsdelivr.net/gh/neoFelhz/neohosts@gh-pages/basic/hosts.txt
+  name: Neo Basic Hosts
+  id: 1645342252
+- enabled: true
+  url: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+  name: StevenBlack
+  id: 1645342253
+- enabled: true
+  url: https://zerodot1.gitlab.io/CoinBlockerLists/hosts
+  name: CoinBlockerLists
+  id: 1645342255
+- enabled: true
+  url: https://easylist-downloads.adblockplus.org/easylistchina.txt
+  name: EasyList China
+  id: 1645342256
+- enabled: true
+  url: https://easylist-downloads.adblockplus.org/easyprivacy.txt
+  name: EasyPrivacy
+  id: 1645342257
+- enabled: true
+  url: https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt
+  name: CJX's Annoyance List
+  id: 1645342258
+- enabled: true
+  url: https://filter.futa.gg/hosts.txt
+  name: FutaFilter
+  id: 1645357705
+whitelist_filters: []
+user_rules:
+- '||adclick.g.doublecklick.net^'
+- '||ads.ad2iction.com^'
+- '||ads.flurry.com^'
+- '||ads.pubmatic.com^'
+- '||aotter.net^'
+- '||apnsgcm.superweather.tw^'
+- '||apnsgcmt.superweather.tw^'
+- '||atsv2-fp.wg1.b.yahoo.com^'
+- '||b.scorecardresearch.com^'
+- '||bounceexchange.com^'
+- '||bs.serving-sys.com^'
+- '||content.bitsontherun.com^'
+- '||core.insightexpressai.com^'
+- '||d2gi7ultltnc2u.cloudfront.net^'
+- '||d3rt1990lpmkn.cloudfront.net^'
+- '||doubleclick.net^'
+- '||ds.serving-sys.com^'
+- '||gads.pubmatic.com^'
+- '||googleads.g.doubleclick.net^'
+- '||gtssl2-ocsp.geotrust.com^'
+- '||image.superweather.tw^'
+- '||js.moatads.com^'
+- '||media-match.com^'
+- '||moptt.azurewebsites.net^'
+- '||moptt.blob.core.windows.net^'
+- '||omaze.com^'
+- '||pagead2.googlesyndication.com^'
+- '||pagead46.l.doubleclick.net^'
+- '||partner.googleadservices.com^'
+- '||pubads.g.doubleclick.net^'
+- '||redirector.gvt1.com^'
+- '||s0.2mdn.net^'
+- '||securepubads.g.doubleclick.net^'
+- '||tkmftc.aotter.net^'
+- '||tpc.googlesyndication.com^'
+- '||v.jwpcdn.com^'
+- '||video-ad-stats.googlesyndication.com^'
+- '||www.googleadservices.com^'
+- '||www.googletagservices.com^'
+- '||www.omaze.com^'
+dhcp:
+  enabled: false
+  interface_name: ""
+  dhcpv4:
+    gateway_ip: ""
+    subnet_mask: ""
+    range_start: ""
+    range_end: ""
+    lease_duration: 86400
+    icmp_timeout_msec: 1000
+    options: []
+  dhcpv6:
+    range_start: ""
+    lease_duration: 86400
+    ra_slaac_only: false
+    ra_allow_slaac: false
+clients: []
+log_compress: false
+log_localtime: false
+log_max_backups: 0
+log_max_size: 100
+log_max_age: 3
+log_file: ""
+verbose: false
+os:
+  group: ""
+  user: ""
+  rlimit_nofile: 0
+schema_version: 12
