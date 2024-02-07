@@ -7,3 +7,4 @@ sudo iptables -I INPUT -p tcp -m tcp --dport 53 -j ACCEPT
 sudo iptables -I INPUT -p udp -m udp --dport 53 -j ACCEPT
 
 https://docs.cloudron.io/apps/adguard-home/
+https://www.ip2location.com/free/visitor-blocker
